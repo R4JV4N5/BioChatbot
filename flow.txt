@@ -1,0 +1,25 @@
+Flow of the program
+_________________
+|   Docs data   |
+_________________
+        |
+_____________________
+|   Preprocessing   |
+|   langchain       |
+|   Loaders         |
+|   splitters       |
+_____________________
+        |
+        |
+        | {Embeddings , Model(quantized for running in cpu local )}
+______________________
+| Sentence Transformer|
+_______________________
+        |
+_______________________
+|     VectorDB        |----------------> Faiss_CPU <-----------Prompt
+_______________________                       |
+                                              |
+                                             \ /
+                                              .
+                                           Response     
